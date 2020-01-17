@@ -8,6 +8,7 @@ from django.conf import settings
 class CustomUser(AbstractUser):
     # add additional fields in here
     is_staff = models.BooleanField(default=False)
+    
 
 
 # Pro model:migrates into database as accounts_pro table
