@@ -12,6 +12,8 @@ with a python version, you a good to go
 CHECK pip
 "pip --version" will tell you the current version of pip on your 
 machine
+to get pip, if you do not have it:
+sudo apt install python3-pip
 
 INSTALL VIRTUALENV
 Use the following command to install a virtualenv 
