@@ -1,7 +1,7 @@
-Requirements
+#Requirements
 You need Python, django and whitenoise to get this project up and running
 
-GET PYTHON
+#GET PYTHON
 Download Python from python.org or use apt-get install (or your
 appropriate package install) -- eg: sudo apt-get install python3
 You also need pip, this usually comes along with python.
@@ -9,36 +9,36 @@ To know if you have python, open ypur terminal or command line
 and type python or python3, if you get an interactive response
 with a python version, you a good to go
 
-CHECK pip
+#CHECK pip
 "pip --version" will tell you the current version of pip on your 
 machine
 to get pip, if you do not have it:
 sudo apt install python3-pip
 
-INSTALL VIRTUALENV
+#INSTALL VIRTUALENV
 Use the following command to install a virtualenv 
 pip install virtualenv
 
 
-CREATE AND ACTIVATE A VIRTUALENV
+#CREATE AND ACTIVATE A VIRTUALENV
 Use the following command to create a virtualenv
 virtualenv name_here
 
 Activate your virtualenv like this (on linux or unix based sys)
 source name_here/bin/activate
 
-On windows
+##On windows
 name_here\Scripts\activate
 
 
-GET DJANGO
+#GET DJANGO
 pip install django
 
-GET WHITENOISE
+#GET WHITENOISE
 pip install white noise
 
-CLONE THIS PROJECT
-Now, you can clone this project to where you want:
+#CLONE THIS PROJECT
+Now, you can clone this project to where you want if you have not already:
 git clone link_here
 
 Enter the project and run this command:
