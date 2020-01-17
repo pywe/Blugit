@@ -1,0 +1,570 @@
+@import url(bootstrap.min.css);
+@import url(font-awesome.min.css);
+@import url(preloader.css);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900);
+
+
+
+
+html, body
+{
+    height: 100%;
+    width: auto;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.Home
+{
+    background-image: url(/Images/Home-Illustration4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Home1
+{
+    background:rgb(241, 240, 240);
+
+}
+
+body,h1,h2,h3,h4,h5,h6
+{
+    font-family:'Titillium Web',sans-serif,
+}
+
+/* 
+.section
+{
+    height: inherit;
+} */
+
+.footer .inner-right a
+{
+    color: grey;
+}
+
+.footer .inner-right a:hover
+{
+    color: blue;
+}
+
+
+.text-midle
+{
+    padding: 240px 0px 30px 0px;
+    font-size: 35px;
+}
+
+.input-group-lg
+{
+    padding: 0px 0px 20px 0px;
+}
+
+.Search
+{
+    margin-bottom:20%;
+    
+}
+
+.ImagePro
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    margin-top: 60%;
+    padding-top: 80px;
+}
+
+.ImageClient
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    margin-top: 30%;
+    padding-top: 30px;
+}
+
+.right
+{
+    float: right;
+    width: 50%;
+    
+}
+
+.left
+{
+    float: left;
+    width: 50%;
+}
+
+.Procontent, .Clientcontent
+{
+    padding-left: 20px
+}
+
+
+.Procontent p, .Clientcontent p
+{
+    font-size: 12px;
+}
+
+.auth-title
+{
+    font-weight: 500;
+}
+
+.authfy-heading
+{
+    text-align: center;
+    margin-top: 60px;
+}
+
+#ProRegistration, #ClientRegistration
+{
+    margin-bottom: 30%;
+}
+
+#ProRegistration .form-control, #ClientRegistration .form-control, #LoginForm .form-control
+{
+    color: #333;
+    font-size: 15px;
+    outline: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+
+}
+#ProRegistration .form-group, #ClientRegistration .form-group, #LoginForm .form-group
+{
+    
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#comment
+{
+    width: 500px;
+    padding: 0;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px
+}
+
+#LoginForm .btn-circle 
+{
+    width: 35px;
+    height: 35px;
+    padding: 6px 0px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#LoginForm
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#LoginForm .reset-password
+{
+    padding-top: 15px;
+    padding-bottom: 15px 
+}
+
+#ProgressiveForm
+{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    text-align: center;
+    align-content: center
+}
+
+#ProgressiveForm p
+{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    color: gray;
+}
+
+#ProgressiveForm .text
+{
+    font-size: 14px;
+    color: black;
+}
+
+.tabContent2
+{
+    text-align: left;
+    padding-left: 70px;
+}
+
+
+.tabContent2 .form-group
+{
+    position: relative;
+    padding-right: 70px;
+}
+
+.tabContent2 h5
+{
+    font-size: 15px;
+    color: grey;
+    font-weight: 400;
+}
+
+.tab h4
+{
+    font-size: 17px;
+    color: black;
+}
+
+.tab .form-group, .tab .text
+{
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tab
+{
+    display: none;
+}
+
+#prevBtn
+{
+    background-color: rgb(61, 48, 240);
+}
+
+.step 
+{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.input.invalid
+{
+    background-color: cornflowerblue;
+}
+
+.step.active
+{
+    opacity: 1;
+}
+
+.step.finish
+{
+    background-color: #4caf50;
+}
+
+.Password-content-reset, .Project, .Inbox, .Password-reset
+{
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 240px;
+}
+
+.Password-content-reset h4
+{
+    padding-top: 50px;
+    font-size: 45px;
+    color: black;
+    text-align: center;
+}
+
+.Password-reset h4
+{
+    padding-top: 50px;
+    font-size: 35px;
+    color: black;
+    text-align: start;
+}
+
+.card
+{
+    margin-top: 50px;
+}
+
+.card-body
+{
+    padding-top: 30px;
+    padding-bottom: 35px;
+
+}
+
+.Project h5, .Inbox h5
+{
+    padding-top: 50px;
+    font-size: 25px;
+    color: black;
+    text-align: left;
+}
+
+.card-body h5
+{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.text-dashboard, .text-Inbox
+{
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: 14px;
+    color: black;   
+}
+
+.avatar-pic 
+{
+    width: 100px;
+}
+
+
+.profile
+{
+    text-align: center;
+}
+
+.file 
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.file input 
+{
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.file-name-email
+{
+    padding-top: 20px;
+}
+
+.v-divider
+{
+    margin-left:5px;
+    margin-right:5px;
+    width:1px;
+    height:100%;
+    border-left:1px solid gray;
+}
+
+.Large-link
+{
+    padding: 0px 0px 0px 0px;
+}
+
+hr 
+{ 
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 100%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+  }
+
+#Account-btn, #Logout-btn
+{
+    text-align: left;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.settings
+{
+    padding-top: 15px;
+}
+
+.settings a, .settings1 a
+{
+    font-size: 15px;
+    text-align: start;
+    background-color: #ffffff;
+}
+
+.settings1
+{
+    text-align: center;
+    padding-top: 60px;
+    margin-left: 150px;
+}
+
+.settings1 p
+{
+    font-size: 13px;
+    padding: 11px 5px 0px 5px;
+    color: grey;
+}
+
+.Deactivate
+{
+    padding-top: 50px;
+    padding-left: 150px;
+}
+.Deactivate h2, .Deactivate h3
+{
+    padding-top: 10px;
+    padding-bottom: 22px;
+    text-align: center;
+}
+
+.Deactivate h6
+{
+    padding-bottom: 15px;
+}
+
+.Deactivate_p1
+{
+    padding-bottom: 20px;
+    font-size: 13px;
+}
+
+.Deactivate_p2
+{
+    font-size: 13px;
+}
+
+.deactivateform button
+{
+    margin-top: 20px;
+}
+
+
+.autocomplete 
+{
+    position: relative;
+    display: inline-block;
+}
+
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 600px)
+{
+
+.text-midle
+{
+    font-size: 17px;
+    padding: 150px 0px 30px 0px;
+
+}
+
+#text-search
+{
+    font-size: 15px;
+}
+
+#searchbutton
+{
+    font-size: 18px;
+}
+
+.Deactivate
+{
+    padding-top: 50px;
+    padding-left: 0px;
+}
+
+.left
+{
+    display: none;
+}
+
+.right
+{
+    width: 90%;
+}
+
+}
+
+
+
+@media screen and (max-width: 992px)
+{
+  
+    .settings1
+    {
+        text-align: center;
+        padding-top: 60px;
+        margin-left: 0px;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 90%;
+        margin-right: 5%;
+    }
+
+
+}
+
+.close {
+    float: right;
+}
