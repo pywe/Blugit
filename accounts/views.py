@@ -22,6 +22,7 @@ def signup_pro_api(request):
     try:
         username = json_data['username']
         password = json_data['password']
+        specialties = json_data['specialties']
         middleName = json_data['middleName']
         firstName = json_data['firstName']
         lastName = json_data['lastName']
@@ -44,6 +45,11 @@ def signup_pro_api(request):
             pro = Pro()
             pro.username = username
             pro.set_password(password)
+            pro.save()
+            for each in specialties:
+                specialty = Specialty.objects.get(name=each)
+                pro.specialties.add(specialty)
+                pro.save()
             pro.first_name = firstName
             pro.middle_name = middleName
             pro.last_name = lastName

@@ -4,6 +4,14 @@ from django.conf import settings
 # from django_mysql.models import ListTextField
 
 
+
+class Specialty(models.Model):
+    name = models.CharField(max_length=50,null=True)
+
+
+    def __str__(self):
+        return self.name
+
 # Create your models here.
 class CustomUser(AbstractUser):
     # add additional fields in here
@@ -16,6 +24,7 @@ class CustomUser(AbstractUser):
 
 # Pro model:migrates into database as accounts_pro table
 class Pro(CustomUser):
+    specialties = models.ManyToManyField(Specialty)
     businessName = models.CharField(max_length=50,null=True)
     scannedId = models.FileField(upload_to="static/IDS",null=True)
     region = models.CharField(max_length=50,null=True)
