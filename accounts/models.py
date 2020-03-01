@@ -8,9 +8,19 @@ from django.conf import settings
 class Specialty(models.Model):
     name = models.CharField(max_length=50,null=True)
 
+    class Meta:
+        verbose_name_plural = "Specialties"
 
     def __str__(self):
         return self.name
+
+usertypes = (
+    ('Admin','Admin'),
+    ('Pro','Pro'),
+    ('Agent','Agent'),
+    ('Client','Client')
+)
+
 
 # Create your models here.
 class CustomUser(AbstractUser):
@@ -19,6 +29,9 @@ class CustomUser(AbstractUser):
     userImage = models.ImageField(upload_to="static/profiles",null=True)
     middle_name = models.CharField(max_length=50,null=True)
     is_staff = models.BooleanField(default=False)
+    verified = models.BooleanField(default=False)
+    userType = models.CharField(max_length=20,null=True,choices=usertypes,default="Pro")
+    points = models.FloatField(default=0.0)
     
 
 

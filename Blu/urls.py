@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 
+api_version = "v1"
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include("accounts.urls")),
+    url(r'^', include("gigs.urls")),
+    url(r'^api/{}/'.format(api_version), include("accounts.urls")),
+    url(r'^api/{}/'.format(api_version), include("gigs.urls")),
 ]

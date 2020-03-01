@@ -45,6 +45,7 @@ def signup_pro_api(request):
             pro = Pro()
             pro.username = username
             pro.set_password(password)
+            pro.userType = 'Pro'
             pro.save()
             for each in specialties:
                 specialty = Specialty.objects.get(name=each)
@@ -68,9 +69,41 @@ def signup_pro_api(request):
             data = {'success':False,'message':str(e)}
         else:
             pro.save()
-            data = {'success':True,'message':'Pro created successfully'}
+            data = {'success':True,'message':'Pro created successfully.Please verify the account.'}
         dump = json.dumps(data)
         return HttpResponse(dump, content_type='application/json')
     dump = json.dumps(data)
     return HttpResponse(dump, content_type='application/json')
 
+
+# This api creates a new client
+def signup_client_api(request):
+    # colleting all field from registration of a client
+    json_data = json.loads(str(request.body, encoding='utf-8'))
+    try:
+        username = json_data['username']
+        password = json_data['password']
+        middleName = json_data['middleName']
+        firstName = json_data['firstName']
+        lastName = json_data['lastName']
+        phone = json_data['phone']
+        email = json_data['email']
+    except Exception as e:
+        data = {'success':False,'message':str(e)}
+    else:
+        try:
+            client = Client()
+            client.username = username
+            client.set_password(password)
+            client.middle_name = middleName
+            client.phone = phone
+            client.email = email
+            client.userType = 'Client'
+            client.save()
+        except Exception as e:
+            data = {'success':False,'message':str(e)}
+        else:
+            client.save()
+            data = {'success':True,'message':'Client created successfully. Please verify the account.'}
+    dump = json.dumps(data)
+    return HttpResponse(dump, content_type='application/json')
