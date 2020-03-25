@@ -25,9 +25,9 @@ usertypes = (
 # Create your models here.
 class CustomUser(AbstractUser):
     # add additional fields in here
-    phone = models.CharField(max_length=14,null=True)
-    userImage = models.ImageField(upload_to="static/profiles",null=True)
-    middle_name = models.CharField(max_length=50,null=True)
+    phone = models.CharField(max_length=14,null=True,blank=True)
+    userImage = models.ImageField(upload_to="static/profiles",null=True,blank=True)
+    middle_name = models.CharField(max_length=50,null=True,blank=True)
     is_staff = models.BooleanField(default=False)
     verified = models.BooleanField(default=False)
     userType = models.CharField(max_length=20,null=True,choices=usertypes,default="Pro")
@@ -39,7 +39,7 @@ class CustomUser(AbstractUser):
 class Pro(CustomUser):
     specialties = models.ManyToManyField(Specialty)
     businessName = models.CharField(max_length=50,null=True)
-    scannedId = models.FileField(upload_to="static/IDS",null=True)
+    scannedId = models.FileField(upload_to="static/ids",null=True)
     region = models.CharField(max_length=50,null=True)
     locationOfService = models.CharField(max_length=50,null=True)
     address = models.CharField(max_length=120,null=True)
@@ -66,3 +66,19 @@ class Agent(CustomUser):
 
     class Meta:
         verbose_name = "Agent"
+        
+
+# Second class model
+class SosAccount(models.Model):
+    credit = models.FloatField(default=0.0)
+    momo_number = models.CharField(max_length=14,null=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,null=True,on_delete=models.SET_NULL,related_name='sos_account')
+
+    class Meta:
+        verbose_name = "Sos Account"
+
+    def __str__(self):
+        if self.user:
+            return self.user.username
+        else:
+            return self.momo_number

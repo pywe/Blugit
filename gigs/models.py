@@ -47,3 +47,7 @@ class Quote(models.Model):
     time_updated = models.DateTimeField(null=True,blank=True)
     accepted = models.BooleanField(default=False)
     time_accepted = models.DateTimeField(null=True,blank=True)
+
+
+    def __str__(self):
+        return "Quote submitted for {} by {}".format(self.request,self.submitted_by.username)
