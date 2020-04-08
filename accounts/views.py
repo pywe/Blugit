@@ -102,6 +102,15 @@ class Activity:
                                     pass
                                 else:
                                     instance.save()
+                            # were ids given for child instances?
+                            elif 'ids' in child['fields'].keys():
+                                print(child['fields']['ids'])
+                                # child_instance = self.objects[child['modelname']].__getattr__.get('id',child['fields']['ids'])
+                                # if child['child_type'] == "many_to_many":
+                                #     instance.__setattr__(child['child_name'],[child_instance,])
+                                # else:
+                                #     instance.__setattr__(child['child_name'],child_instance)
+                                # instance.save()
                             else:
                                 try:
                                     child_instance = self.objects[child['modelname']]()
