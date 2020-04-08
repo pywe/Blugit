@@ -38,6 +38,11 @@ def index(request):
     args = {}
     return render(request,template_name,args)
 
+def check(request):
+    template_name = "accounts/check-questions.html"
+    args = {}
+    return render(request,template_name,args)
+
 class Activity:
     # class constructor, initializer
     # TODO: look for a better way to get these models automatically
